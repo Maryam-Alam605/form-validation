@@ -97,15 +97,6 @@ document
       clearError(zipMsg);
     }
 
-    // Hostel
-    let hostelInput = document.getElementById("hostel");
-    let hostelMsg = document.getElementById("hostelError");
-    if (hostelInput.value === "Choose Hostel") {
-      setError(hostelInput, hostelMsg, " *Please select hostel");
-    } else {
-      clearError(hostelMsg);
-    }
-
     if (formIsValid) {
       alert("Form successfully validated and ready to submit!");
     }
