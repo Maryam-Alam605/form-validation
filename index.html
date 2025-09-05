@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <title>Apply Now</title>
+  </head>
+  <body>
+    <main class="container my-5">
+      <h2
+        style="background-color: rgb(2, 123, 139)"
+        class="text-white p-2 fs-3 p-md-5 text-center"
+      >
+        Admission Form
+      </h2>
+
+      <section class="container my-5 p-4 border border-info">
+        <form
+          id="admissionForm"
+          onsubmit="return validateForm()"
+          class="row g-3"
+        >
+          <!-- for first name -->
+          <div class="col-md-6">
+            <label for="firstname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstname" />
+            <span id="fNameLabel"></span>
+          </div>
+
+          <!-- for last name -->
+          <div class="col-md-6">
+            <div class="col-md-6">
+              <label for="lastname" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastname" />
+              <span id="lNameLabel"></span>
+            </div>
+          </div>
+          <!-- for email -->
+          <div class="col-md-4">
+            <label for="email" class="form-label">Email Address</label>
+            <div class="input-group">
+              <span class="input-group-text">@</span>
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <span id="emailError"></span>
+          </div>
+          <!-- for phone number -->
+          <div class="col-md-4">
+            <label for="number" class="form-label">Phone Number</label>
+            <div class="input-group">
+              <span class="input-group-text"
+                ><i class="bi bi-telephone"></i
+              ></span>
+              <input type="text" class="form-control" id="phonenumber" />
+            </div>
+            <span id="phoneError"></span>
+          </div>
+          <!-- for gender -->
+          <div class="col-md-4">
+            <label class="form-label">Select your Gender </label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="radioDefault"
+                id="genderMale"
+              />
+              <label class="form-check-label" for="genderMale"> Male </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="radioDefault"
+                id="genderFemale"
+              />
+              <label class="form-check-label" for="genderFemale">
+                Female
+              </label>
+            </div>
+            <span id="genderError"></span>
+          </div>
+          <!-- for address -->
+          <div class="col-md-12">
+            <label for="Address" class="form-label">Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Address"
+              placeholder="Apartment, Society, or Floor"
+            />
+            <span id="addressError"></span>
+          </div>
+          <!-- for city -->
+
+          <div class="col-md-6">
+            <label for="City" class="form-label">City</label>
+            <input type="text" class="form-control" id="City" />
+            <span id="cityError"></span>
+          </div>
+          <!-- for province -->
+          <div class="col-md-4">
+            <label for="Province" class="form-label">Province</label>
+            <select id="Province" class="form-select">
+              <option>Choose Province</option>
+              <option>Sindh</option>
+              <option>Balochistan</option>
+              <option>Punjab</option>
+              <option>Khyber Pakhtunkhwa</option>
+              <option>Islamabad Capital Territory</option>
+            </select>
+            <span id="provinceError"></span>
+          </div>
+          <!-- for postal code -->
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Postal Code</label>
+            <input type="text" class="form-control" id="inputZip" />
+            <span id="zipError"></span>
+          </div>
+
+          <!-- for hostel -->
+          <div class="col-md-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="hostel" />
+              <label class="form-check-label" for="hostel">
+                Do you want to avail hostel?
+              </label>
+            </div>
+            <span id="hostelError"></span>
+          </div>
+
+          <div class="col-12 m-3">
+            <button
+              type="submit"
+              class="btn text-white"
+              style="background-color: rgb(2, 123, 139)"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
